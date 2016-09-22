@@ -34,7 +34,7 @@ RUN wget -q https://download3.rstudio.org/centos5.9/x86_64/$SHINY_RPM \
         && mkdir -p /var/log/shiny-server \
         && touch /var/log/shiny-server.log \
         && chown -R $USERNAME: /var/log/shiny-server* \
-        && R -e "devtools::install_url('https://cran.r-project.org/src/contrib/Archive/shiny/shiny_0.13.2.tar.gz')"
+        && R -e "devtools::install_url('https://cran.r-project.org/src/contrib/Archive/shiny/shiny_0.13.2.tar.gz')" \
         && yum clean all
 
 USER $USERNAME
